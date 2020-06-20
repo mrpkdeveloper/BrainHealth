@@ -1,0 +1,18 @@
+#footer{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    position: sticky;
+    bottom: 0px;
+    background-color:#dee2e6;
+}
+
+#navbar{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+#content{
+    height: 1000px;
+}

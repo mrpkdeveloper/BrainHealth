@@ -14,12 +14,23 @@ flush privileges;
 ```
 ## Project structure
 
+### Backend
 ```shell
 SRC
 ├───controllers
 ├───db
 ├───public
 └───routes
+```
+
+### Frontend
+```
+src/public
+├───app          # our own frontendcode
+├───components   # html components parts used
+├───css          # css libraries that we are using
+├───fonts        # fonts that we are using
+└───js           # js libraries that we are using
 ```
 
 users 

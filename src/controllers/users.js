@@ -1,6 +1,7 @@
 const {Users} = require('../db/models')
 const {getRandomUsername} = require('../utils/username')
 const username = require('../utils/username')
+const { usersRoute } = require('../routes/users')
 
 async function createAnonUser(){
    const user = await Users.create({
@@ -9,8 +10,16 @@ async function createAnonUser(){
    return user
 }
 
+async function getUserById (id){
+   return await Users.findOne({ where: { id }})
+}
+
+async function getUserByUsername (username){
+   return await Users.findOne({ where: { username } })
+}
+
 module.exports = {
-   createAnonUser
+   createAnonUser, getUserById, getUserByUsername
 }
 
 //Test

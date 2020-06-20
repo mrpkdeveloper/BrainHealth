@@ -6,9 +6,9 @@ const { db } = require('./db/models')
 
 const app = express()
 
-app.use('/hello', (req,res)=>{
-   res.send("HELLo")
-})
+// app.use('/hello', (req,res)=>{
+//    res.send("HELLo")
+// })
 
 db.sync().then(()=>{
    app.listen(2323, ()=>[

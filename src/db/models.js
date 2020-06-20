@@ -7,29 +7,29 @@ const db = new Sequelize({
    password: 'healthpass'
 })
 
-const COL_ID_DEF = {
+const COL_ID_DEF = {                      //general column id
    type: Sequelize.DataTypes.INTEGER,
    autoIncrement: true,
    primaryKey: true
 }
 
-const COL_TITLE_DEF = {
+const COL_TITLE_DEF = {                   //general column title
    type: Sequelize.DataTypes.STRING(140),
    allowNull: false
 }
 
-const COL_USERNAME_DEF = {
+const COL_USERNAME_DEF = {                //general column username
    type: Sequelize.DataTypes.STRING(30),
    unique: true,
    allowNull: false
 }
 
-const Users = db.define('user',{
+const Users = db.define('user',{          //users table
    id: COL_ID_DEF,
    username: COL_USERNAME_DEF 
 })
 
-const Articles = db.define('article',{
+const Articles = db.define('article',{    //articles table
    id: COL_ID_DEF,
    title: COL_TITLE_DEF,
    body: {
@@ -38,7 +38,7 @@ const Articles = db.define('article',{
    }
 })
 
-const Comments = db.define('comment',{
+const Comments = db.define('comment',{    //comments table
    id: COL_ID_DEF,
    title: COL_TITLE_DEF,
    body: {

@@ -1,0 +1,25 @@
+{
+  "name": "mentalhealth",
+  "version": "1.0.0",
+  "description": "a web app on mentalhealth",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pust0/Project-hackjaipur-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pust0/Project-hackjaipur-/issues"
+  },
+  "homepage": "https://github.com/Pust0/Project-hackjaipur-#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.13"
+  }
+}

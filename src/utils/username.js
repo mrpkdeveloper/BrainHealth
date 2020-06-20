@@ -23,7 +23,7 @@ const NAMES = [
 
 function getRandomUsername(){
    const noun = NAMES[Math.floor(Math.random()*20)]
-   return `${noun}`
+   return `Anon_${noun}`
 }
 
 module.exports = {

@@ -4,7 +4,7 @@ const username = require('../utils/username')
 
 async function createAnonUser(){
    const user = await Users.create({
-      username: getRandomUsername
+      username: getRandomUsername()
    })
    return user
 }
@@ -12,3 +12,13 @@ async function createAnonUser(){
 module.exports = {
    createAnonUser
 }
+
+//Test
+
+// async function task(){
+//    console.log(await createAnonUser())
+//    console.log("----------------------")
+//    console.log(await createAnonUser())
+//    console.log("----------------------") 
+// }
+// task();

@@ -17,7 +17,7 @@ showAllArticles({title: ''})
 it will work
 */
 
-async function showAllArticles(query){
+async function findAllArticles(query){
    const articles = await Articles.findAll({
       include: [ Users ]                  //We can only do this because of the relation we've provided before
    })
@@ -26,7 +26,7 @@ async function showAllArticles(query){
 
 module.exports = { 
    createNewArticle,
-   showAllArticles
+   findAllArticles
 }
 
 //test

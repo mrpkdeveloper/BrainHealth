@@ -21,3 +21,15 @@ SRC
 ├───public
 └───routes
 ```
+
+users 
+1. create user
+
+articles
+1. create article
+2. show all articles
+
+comments
+1. show all comments(user)
+2. show all comments(article)
+3. add a comment

@@ -8,6 +8,8 @@ const { articlesRoute } = require('./routes/articles')
 
 
 const app = express()
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 
 // app.use('/hello', (req,res)=>{
 //    res.send("HELLo")

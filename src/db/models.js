@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 
 const db = new Sequelize({
-   dialect: 'postgres',
+   dialect: 'Postgres',
    database: 'healthdb',
    username: 'healthuser',
    password: 'healthpass'

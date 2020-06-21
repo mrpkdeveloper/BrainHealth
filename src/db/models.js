@@ -55,11 +55,13 @@ Comments.belongsTo(Users)
 
 Articles.hasMany(Comments)
 Comments.belongsTo(Articles)
-db.sync().then(() => {
 
+db.sync().then(() => {
 }).catch((err) => {
    console.log(new Error("Could not start database"))
 })
+
+
 module.exports = {
    db, Users, Articles, Comments
 }

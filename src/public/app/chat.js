@@ -9,7 +9,7 @@ $(
 
       btnSend.onclick = function () {
          socket.emit('msg_send', {
-            // user: currentuser.username,
+            user: currentuser.username,
             msg: inpMsg.value
          })
          inpMsg.value = ''
@@ -20,8 +20,7 @@ $(
 
          let liNewMsg = document.createElement('li')
          liNewMsg.setAttribute("class", "list-group-item");
-         // liNewMsg.innerText = data.user + " :  " + data.msg
-         liNewMsg.innerText = data.msg
+         liNewMsg.innerText = data.user + " :  " + data.msg
          ulMsgList.appendChild(liNewMsg)
       })
 

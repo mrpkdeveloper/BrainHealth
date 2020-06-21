@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 
 const db = new Sequelize({
-   dialect: 'Postgres',
+   dialect: 'mysql',
    database: 'healthdb',
    username: 'healthuser',
    password: 'healthpass'
@@ -55,12 +55,6 @@ Comments.belongsTo(Users)
 
 Articles.hasMany(Comments)
 Comments.belongsTo(Articles)
-
-db.sync().then(() => {
-}).catch((err) => {
-   console.log(new Error("Could not start database"))
-})
-
 
 module.exports = {
    db, Users, Articles, Comments

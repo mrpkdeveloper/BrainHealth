@@ -24,12 +24,12 @@ const COL_USERNAME_DEF = {                //general column username
    allowNull: false
 }
 
-const Users = db.define('user',{          //users table
+const Users = db.define('user', {          //users table
    id: COL_ID_DEF,
-   username: COL_USERNAME_DEF 
+   username: COL_USERNAME_DEF
 })
 
-const Articles = db.define('article',{    //articles table
+const Articles = db.define('article', {    //articles table
    id: COL_ID_DEF,
    title: COL_TITLE_DEF,
    body: {
@@ -38,7 +38,7 @@ const Articles = db.define('article',{    //articles table
    }
 })
 
-const Comments = db.define('comment',{    //comments table
+const Comments = db.define('comment', {    //comments table
    id: COL_ID_DEF,
    title: COL_TITLE_DEF,
    body: {
@@ -55,6 +55,12 @@ Comments.belongsTo(Users)
 
 Articles.hasMany(Comments)
 Comments.belongsTo(Articles)
+
+db.sync().then(() => {
+}).catch((err) => {
+   console.log(new Error("Could not start database"))
+})
+
 
 module.exports = {
    db, Users, Articles, Comments

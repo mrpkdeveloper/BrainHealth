@@ -1,8 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#carousel_item{
+    z-index: 0;
+}
+
 #footer{
-    padding-bottom: 0.5rem;
+    /* padding-bottom: 0.5rem;
     padding-top: 0.5rem;
     position: sticky;
+    bottom: 0px; */
+    position: fixed;
+    height: 50px;
     bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
     background-color:#dee2e6;
 }
 

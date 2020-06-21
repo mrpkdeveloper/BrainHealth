@@ -1,7 +1,23 @@
-<h1>Chat</h1>
-<input id="inpMsg">
-<button id="btnSend">SEND</button>
-<ul id="ulMsgList"></ul>
+<div class="container">
+    <h1 class="text-center">Talk To Our Comunity</h1>
 
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="inplazzytask">Write your querry...</label>
+            <input type="text" class="form-control" id="inpMsg" placeholder="Ask anything ......">
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-success col m-2" id="btnSend">
+        <i class="fas fa-plus-square"></i> Chat
+    </button>
+    <ul id="ulMsgList" class="list-group"></ul>
+</div>
+
+<div class="space-container">
+
+</div>
+
+<link rel="stylesheet" href="/app/style.css">
 <script src="/socket.io/socket.io.js"></script>
 <script defer src="/app/chat.js"></script>

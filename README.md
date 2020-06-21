@@ -56,9 +56,9 @@ get user with with given id
 get user with with given username
 
 ### Post
-1. `get /posts`  
+1. `get /articles`  
 get all posts by everyone
-2. `post /posts`  
+2. `post /articles`  
 create a new post with fields
 ```
 userId=  

@@ -33,10 +33,8 @@ app.use('/', express.static(__dirname + '/public'))
 
 const port = process.env.PORT || 2323
 
-db.sync().then(() => {
-   server.listen(port, () => [
-      console.log("Server started at http://localhost:2323")
-   ])
-}).catch((err) => {
-   console.log(new Error("Could not start database"))
-})
+
+
+server.listen(port, () => [
+   console.log("Server started at http://localhost:2323")
+])

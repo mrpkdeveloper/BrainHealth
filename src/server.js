@@ -33,7 +33,7 @@ app.use('/', express.static(__dirname + '/public'))
 
 const port = process.env.PORT || 2323
 
-db.sync().then(() => {
+db.sync({ force: true }).then(() => {
    server.listen(port, () => [
       console.log("Server started at http://localhost:2323")
    ])

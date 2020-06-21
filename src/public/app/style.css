@@ -13,6 +13,41 @@
     top: 0px;
     z-index: 1;
 }
-#content{
-    height: 1000px;
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+/* #content{
+    /* height: 1000px; */
+/* }  */
+
+.home{
+    margin: 30px;
+    height: 300px;
+
+}
+
+.carousel-caption {
+    bottom: 0px;
+    z-index: 10;
+}
+
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.btn{
+    z-index: 2;
 }

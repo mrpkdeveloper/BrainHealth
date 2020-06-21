@@ -3,7 +3,7 @@ $(
         //after loading navbar.html file than obly loginifneeded function will work
         $('#navbar').load('/components/navbar.html', loginIfNeeded)
         $('#footer').load('/components/footer.html')
-        $('#content').load('/components/Articles.html')
+        $('#content').load('/components/Home.html')
 
     }
 )

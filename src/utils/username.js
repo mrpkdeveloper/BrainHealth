@@ -21,9 +21,23 @@ const NAMES = [
    'Kalvin'
 ]
 
-function getRandomUsername(){
-   const noun = NAMES[Math.floor(Math.random()*20)]
-   return `Anon_${noun}`
+const ADJ = [
+   'fierce',
+   'brave',
+   'equable',
+   'slimy',
+   'husky',
+   'wealthy',
+   'entire',
+   'highfalutin',
+   'realistic',
+   'reflective',
+]
+
+function getRandomUsername() {
+   const noun = NAMES[Math.floor(Math.random() * 20)]
+   const adjectives = ADJ[Math.floor(Math.random() * 10)]
+   return `${adjectives}_${noun}`
 }
 
 module.exports = {

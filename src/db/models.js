@@ -1,11 +1,16 @@
 const Sequelize = require('sequelize')
 
-const db = new Sequelize({
-   dialect: 'mysql',
-   database: 'healthdb',
-   username: 'healthuser',
-   password: 'healthpass'
+const db = new sequelize(process.env.DATABASE_URL, {
+   dialect: 'postgres'
+
 })
+
+// const db = new Sequelize({
+//    dialect: 'mysql',
+//    database: 'healthdb',
+//    username: 'healthuser',
+//    password: 'healthpass'
+// })
 
 const COL_ID_DEF = {                      //general column id
    type: Sequelize.DataTypes.INTEGER,

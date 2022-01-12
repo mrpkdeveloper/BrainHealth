@@ -8,13 +8,8 @@ const Sequelize = require("sequelize");
 //   `postgres://bffxviszwdrzwu:f3375755c58d7353ea037b7a116d84e5cb9c6f4da374a8f66783041097a258e5@ec2-34-232-30-38.compute-1.amazonaws.com:5432/d9hd73nhgmse6d`
 // );
 
-const db = new Sequelize({
+const db = new Sequelize(process.env.DATABASE_URL, {
   dialect: "postgres",
-  database: "d9hd73nhgmse6d",
-  username: "bffxviszwdrzwu",
-  password: "f3375755c58d7353ea037b7a116d84e5cb9c6f4da374a8f66783041097a258e5",
-  port: 5432,
-  host: "ec2-34-232-30-38.compute-1.amazonaws.com",
   ssl: true,
   dialectOptions: {
     ssl: {

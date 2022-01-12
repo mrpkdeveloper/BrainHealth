@@ -1,7 +1,27 @@
 const Sequelize = require("sequelize");
 
-const db = new Sequelize(process.env.DATABASE_URL, {
+// const db = new Sequelize(process.env.DATABASE_URL, {
+//   dialect: "postgres",
+// });
+
+// const db = new Sequelize(
+//   `postgres://bffxviszwdrzwu:f3375755c58d7353ea037b7a116d84e5cb9c6f4da374a8f66783041097a258e5@ec2-34-232-30-38.compute-1.amazonaws.com:5432/d9hd73nhgmse6d`
+// );
+
+const db = new Sequelize({
   dialect: "postgres",
+  database: "d9hd73nhgmse6d",
+  username: "bffxviszwdrzwu",
+  password: "f3375755c58d7353ea037b7a116d84e5cb9c6f4da374a8f66783041097a258e5",
+  port: 5432,
+  host: "ec2-34-232-30-38.compute-1.amazonaws.com",
+  ssl: true,
+  dialectOptions: {
+    ssl: {
+      require: true, // This will help you. But you will see nwe error
+      rejectUnauthorized: false, // This line will fix new error
+    },
+  },
 });
 
 // const db = new Sequelize({
@@ -65,6 +85,15 @@ Comments.belongsTo(Users);
 
 Articles.hasMany(Comments);
 Comments.belongsTo(Articles);
+
+// db.sync()
+//   .then(() => {
+//     console.log("db started");
+//   })
+//   .catch((err) => {
+//     console.log(new Error("Could not start database"));
+//     console.log(err);
+//   });
 
 module.exports = {
   db,

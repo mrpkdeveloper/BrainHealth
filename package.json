@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Pust0/Project-hackjaipur-#readme",
   "dependencies": {
+    "dotenv": "^11.0.0",
     "express": "^4.17.1",
     "mysql2": "^2.1.0",
     "pg": "^8.2.1",

@@ -5,11 +5,11 @@ const db = new Sequelize(process.env.DATABASE_URL, {
 });
 
 // const db = new Sequelize({
-//    dialect: 'mysql',
-//    database: 'healthdb',
-//    username: 'healthuser',
-//    password: 'healthpass'
-// })
+//   dialect: "mysql",
+//   database: "healthdb",
+//   username: "healthuser",
+//   password: "healthpass",
+// });
 
 const COL_ID_DEF = {
   //general column id
